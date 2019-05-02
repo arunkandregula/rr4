@@ -4,34 +4,20 @@
 
 ## CurrentStepN - Current Branch.
 
-Step6 - 6-conditionally-render-route-using-switch
+Step7 - 7-render-routes-as-components-within-components
 
 ## StepN - Branch.
 
-Step6 - 6-conditionally-render-route-using-switch
+Step7 - 7-render-routes-as-components-within-components
 
-## Step6. We will learn why should we use <Switch>
+## Step6.
 
-1. When we want params at / level.
-   say, http://localhost:3000/:ItemId
+0. Route is a component in react rouiter v4.
 
-   It matched both
+1. Main difference between react-router-3 and react-router-4+ is that React Router v4/v5 allows us to render routes as components where ever we like in our components.
 
-   ```
-    <Route path="/about" />
-   ```
+1. This allows components to render themselves dynamically based on the route the application is on.
 
-   and
-
-   ```
-    <Route path="/:itemId" />
-   ```
-
-   In order to fix this to one route, we need to use
-
-   ```
-   <Switch>
-     <Route path="/about" />
-     <Route path="/:itemId" />
-   </Switch>
-   ```
+- Navigation will always display Header component.
+- But Header comp will render itself only for "/step7.1" and "/step7.2" routes. For other routes, it wont render.
+- Basically, every component can check the route it is on and render differently for each route by using the Route comp inside itself.
