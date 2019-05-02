@@ -4,18 +4,19 @@
 
 ## CurrentStepN - Current Branch.
 
-Step3 - 3-NavLink-Switch-Styletron
+Step4 - 4-activeClassName-params-with-regexp
 
 ## StepN - Branch.
 
-Step3 - 3-NavLink-Switch-Styletron
+Step4 - 4-activeClassName-params-with-regexp
 
-## Step2. 3 learnings
+## Step4.
 
-1. Lets see how to show 404 route with <Switch>.
+1. Lets see how to use activeClassName with exact in NavLink
 
-2. Lets see how to use <NavLink> from 'react-router-dom'
+2. Lets see how to use match and url params.
 
-3. Lets see how to use [Styletron](https://github.com/styletron/styletron)
-
-- We need to have a styletron provider wrap the app
+3. Lets see how to use regular expressions.
+   - Lets say we have a requirement to access file name like
+     http://localhost:3000/about/mm-dd-yyyy.html
+   - Task is we need to write a regular expression to match a param of mm-dd-yyyy.html format.

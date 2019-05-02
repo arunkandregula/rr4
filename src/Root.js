@@ -18,8 +18,8 @@ const Root = () => (
       <Navigation />
       <Switch>
         <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/about/:param1(\d{2}-\d{2}-\d{4}):param2(\.[A-Za-z]+)" component={About} />
+        <Route path="/contact/:name?" component={Contact} />
         <Route component={Error} />
       </Switch>
     </BrowserRouter>
