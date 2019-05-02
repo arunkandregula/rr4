@@ -4,25 +4,31 @@
 
 ## CurrentStepN - Current Branch.
 
-Step1 - 1-hello-world-with-browser-router
+Step2 - 2-env-file-and-exact-keyword
 
 ## StepN - Branch.
 
-Step1 - 1-hello-world-with-browser-router
+Step2 - 2-env-file-and-exact-keyword
 
-## Step1. Lets see how to use react router for hello world case
+## Step2. 2 separate learnings
 
-```
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'; // react-router for browser
+1. Lets see how to use [absolute path imports](https://medium.com/@ktruong008/absolute-imports-with-create-react-app-4338fbca7e3d) with create-react-app.
 
-const App = () => <h1>Hello World</h1>;
+- Create.env file
 
-const Root = () => (
-  <BrowserRouter>
-    <Route path="/" component={App} />
-  </BrowserRouter>
-);
+  ```
+  NODE_PATH='src/'
+  ```
 
-export default Root;
-```
+  Thats it.
+  We can happily import using aboslute import paths.
+  Eg.
+
+  ```
+  import Home from 'components/Home';
+  import About from 'components/About';
+  import Contact from 'components/Contact';
+
+  ```
+
+2. We learned importance of "exact" keyword while defining the route.
