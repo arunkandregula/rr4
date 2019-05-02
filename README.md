@@ -4,19 +4,47 @@
 
 ## CurrentStepN - Current Branch.
 
-Step4 - 4-activeClassName-params-with-regexp
+Step5 - 5-parse-query-params
 
 ## StepN - Branch.
 
-Step4 - 4-activeClassName-params-with-regexp
+Step5 - 5-parse-query-params
 
-## Step4.
+## Step5.
 
-1. Lets see how to use activeClassName with exact in NavLink
+1. Value of the property, "to", can be a string or an object.
 
-2. Lets see how to use match and url params.
+```
+      <NavLink to="/step5_inline?id=123" ...>...</NavLink>
+      <NavLink to={{ pathname: 'step5_object', search: 'id=123' }}>...</NavLink>
+```
 
-3. Lets see how to use regular expressions.
-   - Lets say we have a requirement to access file name like
-     http://localhost:3000/about/mm-dd-yyyy.html
-   - Task is we need to write a regular expression to match a param of mm-dd-yyyy.html format.
+2. Value of the query string can be accessed using props.location.search
+
+```
+<div>{JSON.stringify(props.location)}</div>
+```
+
+will display
+
+```
+{"pathname":"/step5_object","search":"?id=123","hash":"","key":"4bpcte"}
+```
+
+React router will put "?" for us for
+
+```
+<NavLink to={{ pathname: 'step5_object', search: 'id=123' }}>...</NavLink>
+```
+
+in
+
+```
+"search":"?id=123"
+```
+
+But it will not do any parsing.
+
+3. There are number of npm packages to parse query strings for us.
+   Lets use a new web standard to do that.
+   URLSearchParams is a new Web API, we can use to retrieve params from the query string.
