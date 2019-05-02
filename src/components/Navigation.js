@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { styled } from "styletron-react";
 import Header from 'components/Header';
+import Content from 'components/Content';
 import './Navigation.css';
 
 const LinkSpaced = styled("span", { margin: "5px" });
@@ -18,6 +19,7 @@ const Navigation = () => {
       <NavLink activeClassName="active" to="step7.1"><LinkSpaced>Step7.1</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="step7.2"><LinkSpaced>Step7.2</LinkSpaced></NavLink>
       <Header />
+      <Content />
     </div>
   );
 };
