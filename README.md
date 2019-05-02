@@ -4,47 +4,34 @@
 
 ## CurrentStepN - Current Branch.
 
-Step5 - 5-parse-query-params
+Step6 - 6-conditionally-render-route-using-switch
 
 ## StepN - Branch.
 
-Step5 - 5-parse-query-params
+Step6 - 6-conditionally-render-route-using-switch
 
-## Step5.
+## Step6. We will learn why should we use <Switch>
 
-1. Value of the property, "to", can be a string or an object.
+1. When we want params at / level.
+   say, http://localhost:3000/:ItemId
 
-```
-      <NavLink to="/step5_inline?id=123" ...>...</NavLink>
-      <NavLink to={{ pathname: 'step5_object', search: 'id=123' }}>...</NavLink>
-```
+   It matched both
 
-2. Value of the query string can be accessed using props.location.search
+   ```
+    <Route path="/about" />
+   ```
 
-```
-<div>{JSON.stringify(props.location)}</div>
-```
+   and
 
-will display
+   ```
+    <Route path="/:itemId" />
+   ```
 
-```
-{"pathname":"/step5_object","search":"?id=123","hash":"","key":"4bpcte"}
-```
+   In order to fix this to one route, we need to use
 
-React router will put "?" for us for
-
-```
-<NavLink to={{ pathname: 'step5_object', search: 'id=123' }}>...</NavLink>
-```
-
-in
-
-```
-"search":"?id=123"
-```
-
-But it will not do any parsing.
-
-3. There are number of npm packages to parse query strings for us.
-   Lets use a new web standard to do that.
-   URLSearchParams is a new Web API, we can use to retrieve params from the query string.
+   ```
+   <Switch>
+     <Route path="/about" />
+     <Route path="/:itemId" />
+   </Switch>
+   ```
