@@ -5,6 +5,7 @@ import About from 'components/About';
 import Contact from 'components/Contact';
 import Error from 'components/Error';
 import Navigation from 'components/Navigation';
+import Step5 from 'components/Step5';
 
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
@@ -20,6 +21,8 @@ const Root = () => (
         <Route path="/" component={Home} exact />
         <Route path="/about/:param1(\d{2}-\d{2}-\d{4}):param2(\.[A-Za-z]+)" component={About} />
         <Route path="/contact/:name?" component={Contact} />
+        <Route path="/step5_inline" component={Step5} />
+        <Route path="/step5_object" component={Step5} />
         <Route component={Error} />
       </Switch>
     </BrowserRouter>
