@@ -4,31 +4,18 @@
 
 ## CurrentStepN - Current Branch.
 
-Step2 - 2-env-file-and-exact-keyword
+Step3 - 3-NavLink-Switch-Styletron
 
 ## StepN - Branch.
 
-Step2 - 2-env-file-and-exact-keyword
+Step3 - 3-NavLink-Switch-Styletron
 
-## Step2. 2 separate learnings
+## Step2. 3 learnings
 
-1. Lets see how to use [absolute path imports](https://medium.com/@ktruong008/absolute-imports-with-create-react-app-4338fbca7e3d) with create-react-app.
+1. Lets see how to show 404 route with <Switch>.
 
-- Create.env file
+2. Lets see how to use <NavLink> from 'react-router-dom'
 
-  ```
-  NODE_PATH='src/'
-  ```
+3. Lets see how to use [Styletron](https://github.com/styletron/styletron)
 
-  Thats it.
-  We can happily import using aboslute import paths.
-  Eg.
-
-  ```
-  import Home from 'components/Home';
-  import About from 'components/About';
-  import Contact from 'components/Contact';
-
-  ```
-
-2. We learned importance of "exact" keyword while defining the route.
+- We need to have a styletron provider wrap the app
