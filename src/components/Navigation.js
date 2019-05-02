@@ -7,7 +7,7 @@ const LinkSpaced = styled("span", { margin: "5px" });
 const Navigation = () => {
   return (
     <div>
-      <NavLink exact activeClassName="active" exact to="/" ><LinkSpaced>Home</LinkSpaced></NavLink>
+      <NavLink exact activeClassName="active" to="/" ><LinkSpaced>Home</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="/about"><LinkSpaced>About</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="/contact"><LinkSpaced>Contact</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="/step5_inline?id=123"><LinkSpaced>Step5-Inline</LinkSpaced></NavLink>
