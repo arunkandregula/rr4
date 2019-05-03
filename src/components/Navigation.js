@@ -18,6 +18,7 @@ const Navigation = () => {
       <NavLink activeClassName="active" to="/step5_inline?id=123"><LinkSpaced>Step5-Inline</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="step7.1"><LinkSpaced>Step7.1</LinkSpaced></NavLink>
       <NavLink activeClassName="active" to="step7.2"><LinkSpaced>Step7.2</LinkSpaced></NavLink>
+      <NavLink activeClassName="active" to="step8"><LinkSpaced>Step8</LinkSpaced></NavLink>
       <Header />
       <Content />
     </div>
