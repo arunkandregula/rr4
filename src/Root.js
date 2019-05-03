@@ -6,6 +6,7 @@ import Contact from 'components/Contact';
 import Error from 'components/Error';
 import Navigation from 'components/Navigation';
 import Step5 from 'components/Step5';
+import Step8 from 'components/Step8';
 
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
@@ -23,6 +24,7 @@ const Root = () => (
         <Route path="/contact/:name?" component={Contact} />
         <Route path="/step5_inline" component={Step5} />
         <Route path="/step5_object" component={Step5} />
+        <Route path="/step8" component={Step8} />
         <Route path="/:itemId" component={Home} />
         <Route component={Error} />
       </Switch>
