@@ -21,7 +21,7 @@ const Root = () => (
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/about/:param1(\d{2}-\d{2}-\d{4})?:param2(\.[A-Za-z]+)?" component={About} />
-        <Route path="/contact/:name?" component={Contact} />
+        <Route path="/contact/:name([A-Za-z]+)?:age(\d{2})?" component={Contact} />
         <Route path="/step5_inline" component={Step5} />
         <Route path="/step5_object" component={Step5} />
         <Route path="/step8" component={Step8} />
