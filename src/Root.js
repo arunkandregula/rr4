@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'; // react-router for browser
-import Home from 'components/Home';
-import About from 'components/About';
-import Contact from 'components/Contact';
-import Error from 'components/Error';
-import Navigation from 'components/Navigation';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Error from './components/Error';
+import Navigation from './components/Navigation';
 
 import { Provider as StyletronProvider } from "styletron-react";
 import { Client as Styletron } from "styletron-engine-atomic";
